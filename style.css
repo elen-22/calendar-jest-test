@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    background-color: lightgray;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px black;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    background: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: lightgray;
+}
+
+#monthYear {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.days,
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-top: 15px;
+}
+
+.days div,
+.calendar-grid div {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.days div {
+    font-weight: bold;
+}
+
+.calendar-grid div {
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.calendar-grid div:hover {
+    background-color: lightgray;
+}
