@@ -20,11 +20,11 @@ function createNoteElement(text, dayKey) {
     const deleteBtn = document.createElement("button");
     deleteBtn.textContent = "x";
     deleteBtn.className = "delete-note";
-    deleteBtn.addEventListener(()=>{
+    deleteBtn.onclick = () => {
         notes[dayKey] = notes[dayKey].filter(n => n !== text);
         saveToLocalStorage();
         showCalendar(); 
-    });
+    };
 
     note.appendChild(deleteBtn);
     return note;
